@@ -2,16 +2,20 @@ Nordstar Construction — premium one-page marketing site built with [Next.js](h
 
 ## Push to GitHub
 
-`origin` is set to **`https://github.com/arnisplum/nordstar-construction-web.git`** (change it with `git remote set-url origin …` if you used another repo name).
+`origin` is **`https://github.com/arnisplum/nordstar-construction-web.git`**.
 
-1. Create the repo on GitHub: [github.com/new](https://github.com/new) → owner **arnisplum** → name **`nordstar-construction-web`** → **empty** (no README / .gitignore / license).
-2. In this folder, push (sign in when Git asks — browser or Personal Access Token):
+**Easiest (GitHub CLI is installed):** in PowerShell, from this project folder:
 
-```bash
-git push -u origin main
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+.\github-setup.ps1
 ```
 
-After the first push, use `git pull` / `git push` from work or home. Then connect the repo in Vercel.
+That opens a one-time GitHub login in the browser, creates **`nordstar-construction-web`** under your account if it is missing, then runs **`git push -u origin main`**.
+
+**Manual:** create an empty repo at [github.com/new](https://github.com/new) (name `nordstar-construction-web`), then `git push -u origin main` and sign in when prompted.
+
+After the first push, use `git pull` / `git push` from work or home, then import the repo in Vercel.
 
 This repo uses a local Git name/email for commits. To use your real address: `git config user.email "you@example.com"` and `git config user.name "Your Name"`, then `git commit --amend --reset-author --no-edit` before pushing (or set `--global` for all projects).
 
