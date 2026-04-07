@@ -11,7 +11,8 @@ if (-not (Test-Path $gh)) {
 
 Set-Location $PSScriptRoot
 
-& $gh auth status 2>$null | Out-Null
+# Native gh stderr must not trip Stop — use cmd for exit code only
+cmd /c "`"$gh`" auth status >nul 2>&1"
 if ($LASTEXITCODE -ne 0) {
   Write-Host "Opening GitHub login (follow the prompts)..."
   & $gh auth login -h github.com -p https -w
@@ -19,7 +20,7 @@ if ($LASTEXITCODE -ne 0) {
 
 # Create repo on GitHub if it does not exist yet (under your logged-in account)
 $repo = "nordstar-construction-web"
-& $gh repo view "arnisplum/$repo" 2>$null | Out-Null
+cmd /c "`"$gh`" repo view arnisplum/$repo >nul 2>&1"
 if ($LASTEXITCODE -ne 0) {
   Write-Host "Creating GitHub repo $repo ..."
   & $gh repo create $repo --public --description "Nordstar Construction marketing site (Next.js)"
