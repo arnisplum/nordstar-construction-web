@@ -2,14 +2,16 @@ Nordstar Construction — premium one-page marketing site built with [Next.js](h
 
 ## Push to GitHub
 
-Git is initialized on `main`. Create an empty repository on GitHub (no README/license), then run once (replace `YOUR_USER` and `YOUR_REPO`):
+`origin` is set to **`https://github.com/arnisplum/nordstar-construction-web.git`** (change it with `git remote set-url origin …` if you used another repo name).
+
+1. Create the repo on GitHub: [github.com/new](https://github.com/new) → owner **arnisplum** → name **`nordstar-construction-web`** → **empty** (no README / .gitignore / license).
+2. In this folder, push (sign in when Git asks — browser or Personal Access Token):
 
 ```bash
-git remote add origin https://github.com/YOUR_USER/YOUR_REPO.git
 git push -u origin main
 ```
 
-Use SSH instead if you prefer: `git@github.com:YOUR_USER/YOUR_REPO.git`. After the first push, use `git pull` / `git push` from work or home to stay in sync.
+After the first push, use `git pull` / `git push` from work or home. Then connect the repo in Vercel.
 
 This repo uses a local Git name/email for commits. To use your real address: `git config user.email "you@example.com"` and `git config user.name "Your Name"`, then `git commit --amend --reset-author --no-edit` before pushing (or set `--global` for all projects).
 
