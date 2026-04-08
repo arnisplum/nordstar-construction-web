@@ -1,8 +1,7 @@
 /** Custom Homes subpage — swap copy and hero image when content is final */
 
 export const customHomes = {
-  heroImageSrc:
-    "https://images.unsplash.com/photo-1600585154084-4e5fe7c39198?auto=format&fit=crop&w=2400&q=82",
+  heroImageSrc: "/images/custom-homes/hero.jpg",
   heroImageAlt:
     "Modern custom home with wood siding and mountain landscape beyond",
   headline: ["Built With Care.", "Designed for Living."] as const,

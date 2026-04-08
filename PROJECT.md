@@ -10,7 +10,7 @@ Premium one-page homepage template for **Nordstar Construction**, a custom resid
 | UI | React 19 |
 | Styling | Tailwind CSS v4 |
 | Motion | [`motion`](https://motion.dev/) (subtle scroll + load animations) |
-| Images | `next/image` + remote [Unsplash](https://unsplash.com/) URLs (swap later) |
+| Images | `next/image` + files under `public/images/` (paths in `data/*.ts`) |
 
 ## Project structure
 
@@ -66,24 +66,21 @@ data/
 ## Content & images
 
 - **Copy** in `data/*.ts` is **placeholder** for stakeholder review.  
-- **Photos** are **Unsplash** URLs in data files — suitable for demos; replace with owned photography or licensed assets for production.  
-- **Attribution:** Unsplash photos are used under the [Unsplash License](https://unsplash.com/license); attribute in production if your policy requires it.
+- **Photos** ship as **JPEGs under `public/images/`** (`hero/`, `services/`, `projects/`, `custom-homes/`). Paths like `/images/projects/r1.jpg` are set in `data/*.ts`. Replace files on disk (same filename) or change paths when you have final photography. Originals were sourced from Unsplash for the template; keep attribution if your license requires it.
 
-### Where stock images are defined
+### Where images live
 
-| Area | File | Field(s) |
-|------|------|----------|
-| Hero background | `data/site.ts` | `site.hero.imageSrc` |
-| Service panels (×2) | `data/services.ts` | each `imageSrc` |
-| Project masonry (×9) | `data/projects.ts` | each `imageSrc` |
+| Area | On disk | Data field |
+|------|---------|------------|
+| Home hero | `public/images/hero/home-hero.jpg` | `data/site.ts` → `site.hero.imageSrc` |
+| Service cards (×2) | `public/images/services/*.jpg` | `data/services.ts` → each `imageSrc` |
+| Portfolio (×9) | `public/images/projects/r1.jpg` … `c5.jpg` | `data/projects.ts` → each `imageSrc` |
+| Custom Homes hero | `public/images/custom-homes/hero.jpg` | `data/customHomes.ts` → `heroImageSrc` |
 
-`next.config.ts` allows `images.unsplash.com` for `next/image` optimization. To add another host, extend `images.remotePatterns`.  
+### Swapping / CMS later
 
-### Swapping images later
-
-1. **Option A — Local files:** Add files under `public/images/...` and set `src` to `/images/...` in data (use `string` paths; `next/image` works with local paths).  
-2. **Option B — CMS:** Replace static imports or fetch in server components; keep the same shape (`{ src, alt, width?, height? }`).  
-3. **Option C — Another CDN:** Add the host to `images.remotePatterns` in `next.config.ts`.  
+1. **Local:** Drop new files into `public/images/...` and point `imageSrc` at `/images/...`.  
+2. **CMS/CDN:** Return URLs from your API and either use plain `<img>` or add `images.remotePatterns` in `next.config.ts` for `next/image`.  
 
 ### Partner logos
 

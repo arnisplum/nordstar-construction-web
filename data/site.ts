@@ -21,8 +21,7 @@ export const site = {
       "Custom homes and commercial construction in British Columbia — crafted with clarity, precision, and care since 2016.",
     primaryCta: { label: "Get Started", href: "#contact" },
     secondaryCta: { label: "View Projects", href: "#projects" },
-    imageSrc:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2400&q=82",
+    imageSrc: "/images/hero/home-hero.jpg",
     imageAlt:
       "Modern luxury residence at dusk with warm interior lighting and large glass facade",
   },

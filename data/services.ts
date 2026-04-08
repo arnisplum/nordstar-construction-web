@@ -14,8 +14,7 @@ export const services: Service[] = [
     title: "Residential Construction",
     summary:
       "Custom homes and residential builds from foundation to finish — tailored detailing, energy-smart envelopes, and interiors that feel intentional.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=82",
+    imageSrc: "/images/services/residential.jpg",
     imageAlt: "Contemporary two-story home with large windows and landscaped frontage",
     href: "/custom-homes",
   },
@@ -24,8 +23,7 @@ export const services: Service[] = [
     title: "Commercial Construction",
     summary:
       "Shell, core, and tenant-ready spaces for offices, retail, and light industrial — coordinated logistics and clean handovers.",
-    imageSrc:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=82",
+    imageSrc: "/images/services/commercial.jpg",
     imageAlt: "Large-scale concrete foundation and structural work at a commercial site",
   },
 ];
