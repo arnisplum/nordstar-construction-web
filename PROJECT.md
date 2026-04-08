@@ -49,7 +49,7 @@ data/
 1. **Header** — Fixed top, logo, anchor links, hamburger on small screens  
 2. **Hero** — Full-viewport image, headline, subhead, primary + secondary CTAs  
 3. **About** — Editorial split: statement + body copy (transparency, trust, craft)  
-4. **Services** — Image-forward panels (residential, commercial, renovations/TI)  
+4. **Services** — Image-forward panels (residential and commercial)  
 5. **Projects** — Filterable grid (Residential / Commercial / All), hover captions  
 6. **Partners** — “Trusted by” strip (placeholder labels; swap for SVG/PNG logos)  
 7. **Contact** — Dark band, CTA, optional form + contact placeholders  
@@ -74,7 +74,7 @@ data/
 | Area | File | Field(s) |
 |------|------|----------|
 | Hero background | `data/site.ts` | `site.hero.imageSrc` |
-| Service panels (×3) | `data/services.ts` | each `imageSrc` |
+| Service panels (×2) | `data/services.ts` | each `imageSrc` |
 | Project masonry (×9) | `data/projects.ts` | each `imageSrc` |
 
 `next.config.ts` allows `images.unsplash.com` for `next/image` optimization. To add another host, extend `images.remotePatterns`.  

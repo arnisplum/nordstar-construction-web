@@ -1,15 +1,19 @@
 export const site = {
   companyName: "Nordstar Construction",
   legalName: "Nordstar Construction Ltd.",
+  logo: {
+    src: "/nordstar_logo.svg",
+    alt: "Nordstar Construction",
+  },
   tagline: "Custom homes & commercial construction across British Columbia.",
   description:
     "Premier general contractor delivering transparency, reliability, and refined craftsmanship since 2016.",
   nav: [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/#home" },
+    { label: "About", href: "/#about" },
+    { label: "Services", href: "/#services" },
+    { label: "Projects", href: "/#projects" },
+    { label: "Contact", href: "/#contact" },
   ],
   hero: {
     headline: "Built on Trust. Proven by Results.",

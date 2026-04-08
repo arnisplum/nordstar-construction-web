@@ -2,26 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Logo } from "@/components/ui/Logo";
 import { site } from "@/data/site";
-
-function LogoMark() {
-  return (
-    <span className="flex items-center gap-3" aria-hidden>
-      <span className="relative flex h-9 w-9 shrink-0 items-center justify-center">
-        <span className="absolute left-0.5 top-1 h-5 w-3 rotate-12 bg-emerald-600/90" />
-        <span className="absolute right-1 bottom-1 h-5 w-3 -rotate-6 bg-teal-600/90" />
-      </span>
-      <span className="flex flex-col leading-none">
-        <span className="text-[0.65rem] font-semibold tracking-[0.25em] text-stone-500">
-          NORDSTAR
-        </span>
-        <span className="text-sm font-semibold tracking-[0.12em] text-stone-900">
-          CONSTRUCTION
-        </span>
-      </span>
-    </span>
-  );
-}
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -30,11 +12,11 @@ export function Header() {
     <header className="fixed top-0 z-50 w-full border-b border-stone-200/80 bg-white/85 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-8 lg:px-10">
         <Link
-          href="#home"
-          className="group flex items-center gap-1 outline-none focus-visible:ring-2 focus-visible:ring-teal-600/40 focus-visible:ring-offset-2"
+          href="/"
+          className="group flex shrink-0 items-center outline-none focus-visible:ring-2 focus-visible:ring-teal-600/40 focus-visible:ring-offset-2"
           onClick={() => setOpen(false)}
         >
-          <LogoMark />
+          <Logo variant="header" className="max-h-8 w-auto sm:max-h-9" />
         </Link>
 
         <nav

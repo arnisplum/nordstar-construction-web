@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
+import { Logo } from "@/components/ui/Logo";
 import { site } from "@/data/site";
 
 export function Footer() {
@@ -8,10 +9,13 @@ export function Footer() {
       <Container>
         <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
           <div className="max-w-sm">
-            <p className="font-display text-xl text-stone-900">
-              {site.companyName}
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-stone-600">
+            <Link
+              href="/"
+              className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-teal-600/40 focus-visible:ring-offset-2"
+            >
+              <Logo variant="footer" className="max-h-8 w-auto sm:max-h-9" />
+            </Link>
+            <p className="mt-4 text-sm leading-relaxed text-stone-600">
               {site.footer.tagline}
             </p>
           </div>
